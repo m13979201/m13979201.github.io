@@ -1,0 +1,242 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+ベースカラー（背景色）：#f3f2f1　灰色
+文字色：#302F3F
+アクセントカラー：#d9333f　紅赤
+アクセントの背景色：#D9CE34
+*/
+
+body{
+font: 14px/1.6 "Hiragino Kaku Gothic Pro",Osaka,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",Verdana,Arial,sans-serif;
+margin:0;
+color:#302F3F;
+background-color: #f3f2f1;
+}
+
+img{
+outline:none;
+border-style:none;
+}
+
+a{
+    color:#302F3F;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+a:visited{
+    color:#302F3F;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+a:hover {
+    color:#302F3F;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+ul,li {
+  list-style-type: none;
+}
+p {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+/*****文字のアンダーライン*****/
+.under {
+  background: linear-gradient(transparent 50%, #D9CE34 50%);
+}
+
+/*****HEADER*****/
+header{
+    display: block;
+    width:60%;
+    margin-left: 20%;
+    overflow: hidden;
+}
+header h1{
+    font-size:120%;
+    color:;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:1px solid #302F3F;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    font-weight:400;
+    float: center;
+}
+header h2{
+    font-size:120%;
+    color:#302F3F;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:1px solid #302F3F;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    font-weight:400;
+    float: center;
+}
+header p{
+    font-size:100%;
+    color:#302F3F;
+    float: center;
+}
+
+/*****NAV*****/
+nav{
+border-bottom: 1px solid #302F3F;
+}
+nav ul{
+display: table;
+margin: 0 auto;
+padding: 0;
+width: 80%;
+text-align: center;
+}
+nav ul li{
+display: table-cell;
+min-width: 50px;
+border-right: 1px solid #302F3F;
+}
+nav ul li:first-child{
+border-left: 1px solid #302F3F;
+}
+/*ナビゲーションの文字色*/
+nav ul li a{
+display: block;
+width: 100%;
+padding: 10px 0;
+text-decoration: none;
+color: #d9333f;
+}
+/*ナビゲーション_マウスオーバーしたときの挙動*/
+nav ul li a:hover{
+background-color:#D9CE34;
+border-bottom: 5px solid #d9333f;
+color:#d9333f;
+}
+nav ul li.current{
+font-weight: bold;
+}
+nav ul li.current a{
+/*border-bottom: 5px solid #d9333f;*/
+color:#d9333f;
+}
+/*スケジュール部分の囲み_上が赤色ボーダー*/
+/**　参考
+https://saruwakakun.com/html-css/reference/box
+**/
+.party_schedule{
+  padding: 0.5em 1em;
+  margin: 2em 3em;
+  color: #302F3F;
+  background: white;
+  border-top: solid 5px #d9333f;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+/*スケジュール部分の囲み_上が黒色ボーダー*/
+.schedule{
+    padding: 0.5em 1em;
+    margin: 2em 3em;
+    color: #302F3F;
+    background: white;
+    border-top: solid 5px #302F3F;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+.schedule p {
+    margin: 10px;
+    padding: 10px;
+}
+
+article {
+	display: flex;
+	margin-bottom: 20px;
+	padding: 10px;
+	border-radius: 5px;
+	box-sizing: border-box;
+	box-shadow: 0 0 5px #999;
+  text-align: left;
+}
+article figure {
+	margin-right: 10px;
+	width: 100px;
+	height: 100px;
+}
+article figure img {
+		min-width: 100px;
+		max-width: 100%;
+		vertical-align: top;
+	}
+
+.travel_area{
+    margin: 2em 2em;
+    color: #302F3F;
+    background: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+.travel_area p{
+    padding: 0.5em 1em;
+}
+#page_top{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #d9333f;
+  opacity: 0.6;
+  border-radius: 50%;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f106';
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+/*****google_map*****/
+.ggmap {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px;
+height: 0;
+overflow: hidden;
+}
+
+.ggmap iframe,
+.ggmap object,
+.ggmap embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
